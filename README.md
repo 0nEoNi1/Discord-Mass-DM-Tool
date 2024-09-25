@@ -1,3 +1,57 @@
+Guide:
+
+
+Step 1
+Download this zip file: https://github.com/1...d-Mass-DM-Tool/
+Drag the folder to your desktop
+ 
+Step 2
+Open Launch.bat and install the required extensions
+ 
+Step 3
+Open the account you want to use for DM'ing, go to Settings > Advanced > Enable Developer Mode
+ 
+Step 4
+Open Discord in a browser window and log in
+https://discord.com/app
+ 
+Step 5
+Press CTRL + Shift + I 
+Go to the 'Network' Tab at the top
+Type 'science' into the search box Reload page if nothing shows up
+Click on it, then click on the 'Headers' Tab
+Scroll down until the 'Request Headers' part
+At Line 8, click on 'authorization' and copy the key
+ 
+
+Step 6
+
+Open settings.json
+
+Paste the 'authorization' key inbetween the "" marks
+
+
+Step 7
+Open script.js with a text editor
+Look for Line 16
+
+const client = new Discord.Client();
+Replace it with this code
+
+const client = new Discord.Client({ _tokenType: '' });
+Step 8 (optional)
+
+This step is necessary incase you want to send messages that require breaks and multiple lines. Most likely you want this for advertising
+
+Look for Line 51
+
+ MassDMTimeOut(null, timer, message);
+Replace it with this code
+
+MassDMTimeOut(null, timer, "Line1/nLine2/n/nLine3");
+
+
+
 # Mass DM
 
 ![image](https://user-images.githubusercontent.com/71920969/119238368-fbfb1c00-bb39-11eb-9380-a9962604ec8a.png)
